@@ -29,6 +29,8 @@
     <!-- Set viewport scaling and zoom features -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <script type="text/javascript" src="phonegap-1.4.1.js"></script>
+
     <!-- Include the full development version of Modernizr. In production, you should use a -->
     <!-- minimized custom build to reduce file size -->
     <script type="text/javascript" src="js/libs/modernizr-2.0.6.js"></script>
@@ -130,11 +132,27 @@
                         $('span.success').remove();
                     });
 
+                    //Native access test
+                    document.addEventListener("deviceready", function() {
+                        $("#notifyTest").click(function(event) {
+                            navigator.notification.alert(
+                                "Well isn't that special?!?!",
+                                alertDismissed,
+                                "Native Notification",
+                                "Done"
+                            );
+                        });
+                    }, false );
+
                     //scrolling support for devices that don't support overflow:auto
                     touchScrollX('#members');
                 });
             }
         }]);
+
+        function alertDismissed() {
+            // do something
+        }
     </script>
 </head>
 <body>
@@ -162,7 +180,7 @@
                     <p>You have successfully deployed a Java EE 6 web application.</p>
                     <h3>Your application can run on:</h3>
                     <img src="img/dualbrand_as7eap.png" class="max-width-100"/>
-
+                    <a id="notifyTest">Click Me!</a>
                     <ul id="features">
                         <li class="feature">Pure HTML client</li>
                         <li class="feature">JAX-RS GET &amp; POST end points</li>
