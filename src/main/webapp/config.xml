@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+    <widget xmlns = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.phonegap.example"
+        version   = "1.0.0">
+
+    <name>AeroGear POH5 Kitchensink</name>
+
+    <description>
+        An example of the AeroGear POH5 Kitchensink quickstart converted to a native app.
+    </description>
+
+    <author href="https://jboss.org/aerogear" email="kris@redhat.com">
+        Kris Borchers
+    </author>
+
+    <preference name="stay-in-webview" value="true" />
+
+    <icon src="img/aerogear_avatar_48px.png"
+        width="48px"
+        height="48px"
+        default="true" />
+
+</widget>
