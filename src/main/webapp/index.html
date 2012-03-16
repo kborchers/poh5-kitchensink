@@ -65,19 +65,13 @@
             });
 
             //Native access test
-            $("#notifyTest").click(function(event) {
-                var x = navigator.notification.alert("Well isn't that special?!?!");
-                //navigator.notification.vibrate( 500 );
-                event.preventDefault();
-            });
+            document.addEventListener("deviceready", function() {
+                navigator.notification.alert("Well isn't that special?!?!");
+            }, false);
 
             //scrolling support for devices that don't support overflow:auto
             touchScrollX('#members');
         });
-
-        function alertDismissed() {
-            // do something
-        }
     </script>
 </head>
 <body>
