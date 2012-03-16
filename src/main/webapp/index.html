@@ -133,16 +133,15 @@
                     });
 
                     //Native access test
-                    document.addEventListener("deviceready", function() {
-                        $("#notifyTest").click(function(event) {
-                            navigator.notification.alert(
-                                "Well isn't that special?!?!",
-                                alertDismissed,
-                                "Native Notification",
-                                "Done"
-                            );
-                        });
-                    }, false );
+                    $("#notifyTest").click(function(event) {
+                        navigator.notification.alert(
+                            "Well isn't that special?!?!",
+                            alertDismissed,
+                            "Native Notification",
+                            "Done"
+                        );
+                        event.preventDefault();
+                    });
 
                     //scrolling support for devices that don't support overflow:auto
                     touchScrollX('#members');
@@ -180,7 +179,7 @@
                     <p>You have successfully deployed a Java EE 6 web application.</p>
                     <h3>Your application can run on:</h3>
                     <img src="img/dualbrand_as7eap.png" class="max-width-100"/>
-                    <a id="notifyTest">Click Me!</a>
+                    <a id="notifyTest" href="#">Click Me!</a>
                     <ul id="features">
                         <li class="feature">Pure HTML client</li>
                         <li class="feature">JAX-RS GET &amp; POST end points</li>
