@@ -14,8 +14,6 @@
         Kris Borchers
     </author>
 
-    <preference name="stay-in-webview" value="true" />
-
     <icon src="img/aerogear_avatar_48px.png"
         width="48px"
         height="48px"
