@@ -19,4 +19,5 @@
         height="48px"
         default="true" />
 
+    <preference name="orientation" value="default" />
 </widget>
