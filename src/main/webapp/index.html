@@ -66,8 +66,8 @@
 
             //Native access test
             $("#notifyTest").click(function(event) {
-                navigator.notification.alert("Well isn't that special?!?!");
-                navigator.notification.vibrate( 500 );
+                var x = navigator.notification.alert("Well isn't that special?!?!");
+                //navigator.notification.vibrate( 500 );
                 event.preventDefault();
             });
 
