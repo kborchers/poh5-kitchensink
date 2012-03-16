@@ -66,8 +66,7 @@
 
             //Native access test
             document.addEventListener("deviceready", function() {
-                console.log('here');
-                navigator.notification.beep(2);
+                navigator.notification.alert("Well isn't that special?!?!", "Native Alert");
             }, false);
 
             //scrolling support for devices that don't support overflow:auto
